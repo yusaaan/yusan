@@ -3,69 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <title>Yusan Khatiwada - My Story</title>
     <style>
-        /* Basic CSS styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
         }
+
         header {
-            background-color: #333;
+            background-color: #3b5998;
             color: #fff;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
         }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
         nav {
-            background-color: #444;
-            padding: 10px 0;
+            background-color: #4CAF50;
+            padding: 12px 0;
             text-align: center;
+            font-size: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 0 10px;
+            padding: 15px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            background-color: #3e8e41;
         }
+
         main {
-            padding: 20px;
-        }
-        footer {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
             background-color: #fff;
-            color: #000;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #3b5998;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+            nav a {
+                padding: 12px 15px;
+                font-size: 16px;
+            }
+            main {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>
+<header id="header">
     <h1>Yusan Khatiwada</h1>
+    <p>Welcome to My Personal Website</p>
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact" id="contactLink">Contact</a>
 </nav>
 
 <main>
-    <h2>About me</h2>
-    <p>Hello! My name is Yusan Khatiwada, and I’m excited to share my story with you. Every person has a unique journey that reflects their experiences, values, and the lessons they’ve learned along the way. I believe that understanding our own stories helps us connect with others and appreciate the true nature of being human. In this narrative, I will take you through my life—from my early years to the present—and share how these experiences have shaped who I am today.
-.</p>
-    <p>I'm learning new things.</p>
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Yusan Khatiwada. I'm passionate about learning new things and exploring the world around me. I believe in continuous growth and self-improvement. Every person has a unique story, and I’m excited to share mine with you. From my childhood to where I am now, these experiences have shaped who I am today.</p>
+    </section>
+
+    <section class="section">
+        <h2>Hobbies & Interests</h2>
+        <p>I have a variety of hobbies that fuel my creativity and keep me engaged. I enjoy:</p>
+        <ul>
+            <li>Traveling to new places and experiencing different cultures</li>
+            <li>Photography and capturing moments</li>
+            <li>Reading books on self-improvement and technology</li>
+            <li>Coding and working on web development projects</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400" alt="Traveling Image">
+    </section>
+
+    <section class="section" id="goals">
+        <h2>My Goals</h2>
+        <p>My main goal is to keep growing, both personally and professionally. I aspire to:</p>
+        <ul>
+            <li>Become proficient in web development and design</li>
+            <li>Travel the world and learn from different cultures</li>
+            <li>Make a positive impact on others through my work</li>
+        </ul>
+    </section>
+
+    <section class="section" id="learning">
+        <h2>What I'm Learning</h2>
+        <p>Currently, I’m learning new technologies like React, Node.js, and diving deeper into UX/UI design principles. I’m also exploring AI and its potential applications in web development. The learning journey never stops!</p>
+    </section>
 </main>
 
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Me</h2>
+        <p>Feel free to get in touch with me for any inquiries or collaborations!</p>
+        <form action="#">
+            <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin: 10px 0;">
+            <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin: 10px 0;">
+            <textarea placeholder="Your Message" style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+            <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; cursor: pointer;">Submit</button>
+        </form>
+    </div>
+</div>
+
 <footer>
-    <p>I never ever thought I'd be making a website about myself.</p>
+    <p>I never thought I’d be making a website about myself, but here I am. Thanks for visiting!</p>
 </footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 100) {
+            header.style.backgroundColor = '#2d4373';
+        } else {
+            header.style.backgroundColor = '#3b5998';
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    const modal = document.getElementById('contactModal');
+    const contactLink = document.getElementById('contactLink');
+    const closeModal = document.querySelector('.close');
+
+    contactLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.style.display = "block";
+    });
+
+    closeModal.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
 
 </body>
 </html>
