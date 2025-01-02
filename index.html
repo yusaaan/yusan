@@ -83,7 +83,7 @@
 
         .about-me-container {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             gap: 20px;
             flex-wrap: wrap;
@@ -92,15 +92,12 @@
 
         .about-text {
             flex: 1;
+            word-wrap: break-word;
         }
 
         .about-photo {
-            position: absolute;
-            right: 20px;
-            top: 0;
-            bottom: 0;
-            text-align: center;
             flex: 0 0 300px;
+            text-align: center;
         }
 
         .about-photo img {
@@ -129,7 +126,6 @@
             .about-me-container {
                 flex-direction: column;
                 text-align: center;
-                position: relative;
             }
             .about-photo {
                 margin-top: 20px;
