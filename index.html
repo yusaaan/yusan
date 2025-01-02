@@ -81,6 +81,29 @@
             color: #333;
         }
 
+        .about-me-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-photo {
+            flex: 0 0 40%;
+            text-align: center;
+        }
+
+        .about-photo img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -134,6 +157,13 @@
             main {
                 padding: 20px;
             }
+            .about-me-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-photo {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -153,7 +183,14 @@
 <main>
     <section class="section" id="about">
         <h2>About Me</h2>
-        <p>Hello! My name is Yusan Khatiwada. I'm passionate about learning new things and exploring the world around me. I believe in continuous growth and self-improvement. Every person has a unique story, and I’m excited to share mine with you. From my childhood to where I am now, these experiences have shaped who I am today.</p>
+        <div class="about-me-container">
+            <div class="about-text">
+                <p>Hello! My name is Yusan Khatiwada. I'm passionate about learning new things and exploring the world around me. I believe in continuous growth and self-improvement. Every person has a unique story, and I’m excited to share mine with you. From my childhood to where I am now, these experiences have shaped who I am today.</p>
+            </div>
+            <div class="about-photo">
+                <img src="myself.jpg" alt="Yusan Khatiwada">
+            </div>
+        </div>
     </section>
 
     <section class="section">
@@ -164,7 +201,7 @@
             <li>Photography.</li>
             <li>Reading novels</li>
         </ul>
-        </section>
+    </section>
 
     <section class="section" id="goals">
         <h2>My Goals</h2>
@@ -177,13 +214,14 @@
     </section>
 
     <section class="section" id="learning">
-       <h2>About My Studies</h2>
-<li>Graduated from Paradise English Boarding School in 2021 (Class 10).</li>
-<li>Completed +2 from Janasahayog Ma.Vi in 2023.</li>
-<li>Currently pursuing Mechanical Engineering at Kathmandu University (KU).</li>
+        <h2>About My Studies</h2>
+        <ul>
+            <li>Graduated from Paradise English Boarding School in 2021 (Class 10).</li>
+            <li>Completed +2 from Janasahayog Ma.Vi in 2023.</li>
+            <li>Currently pursuing Mechanical Engineering at Kathmandu University (KU).</li>
+        </ul>
     </section>
 </main>
-
 
 <script>
     window.addEventListener('scroll', function() {
