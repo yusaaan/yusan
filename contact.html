@@ -1,38 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Yusan</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yusan Khatiwada - Contact</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Arial', sans-serif;
                 margin: 0;
                 padding: 0;
-                background-color: #1f1f1f;
+                background: linear-gradient(135deg, #F7D1D1, #F0E5E5);
+                color: #333;
+                overflow-x: hidden;
+            }
+
+            header {
+                background-color: #F4A6B1;
                 color: #fff;
-            }
-            nav {
+                padding: 30px 0;
                 text-align: center;
-                background-color: #333;
-                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
+
+            header h1 {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+
+            nav {
+                background-color: #F1C3D4;
+                padding: 12px 0;
+                text-align: center;
+                font-size: 18px;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
             nav a {
                 color: #fff;
                 text-decoration: none;
-                padding: 20px;
+                padding: 15px 20px;
+                font-weight: bold;
+                transition: background-color 0.3s;
             }
-            header {
-                text-align: center;
-                background-color: #1f1f1f;
-                padding: 20px;
-                color: #fff;
+
+            nav a:hover {
+                background-color: #F1A1B4;
             }
+
+            main {
+                padding: 40px 20px;
+                max-width: 1200px;
+                margin: auto;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                animation: fadeIn 1s forwards;
+            }
+
+            h2 {
+                font-size: 28px;
+                color: #F4A6B1;
+                margin-bottom: 20px;
+            }
+
+            .section {
+                margin-bottom: 30px;
+            }
+
+            .section img {
+                max-width: 100%;
+                border-radius: 8px;
+                margin-top: 20px;
+            }
+
+            .section h3 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
             .me {
                 color: #fff;
                 text-align: center;
                 margin-top: 30px;
             }
+
             .ab {
                 color: #fff;
                 margin-left: 10%;
@@ -40,34 +99,56 @@
                 text-align: left;
                 text-decoration: none;
             }
+
             p {
                 font-size: 18px;
             }
+
             a {
                 color: #F18D8D;
                 text-decoration: none;
             }
+
             a:hover {
                 text-decoration: underline;
             }
+
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 28px;
+                }
+                nav a {
+                    padding: 12px 15px;
+                    font-size: 16px;
+                }
+                main {
+                    padding: 20px;
+                }
+            }
         </style>
     </head>
-<body>
-    <header>
-        <h1>Contact Me :)</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Contact</a>
-    </nav>
-    <div class="me">
-        <h2>You can contact me through the following links</h2>
-        <div class="ab">
-            <p>Email: Yusan@duck.com</p>
-            <p>Facebook: <a target="_blank" href="https://www.facebook.com/hdjajrbakekajenwjaj">Yusan Khatiwada</a></p>
-            <p>Instagram: <a target="_blank" href="https://www.instagram.com/mr_yusann/">Yusan Khatiwadaa</a></p>
-        </div>
-    </div>
-</body>
+    <body>
+
+        <header>
+            <h1>Contact Me :)</h1>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <main>
+            <section class="section" id="contact">
+                <h2>You can contact me through the following links</h2>
+                <div class="ab">
+                    <p>Email: Yusan@duck.com</p>
+                    <p>Facebook: <a target="_blank" href="https://www.facebook.com/hdjajrbakekajenwjaj">Yusan Khatiwada</a></p>
+                    <p>Instagram: <a target="_blank" href="https://www.instagram.com/mr_yusann/">Yusan Khatiwadaa</a></p>
+                </div>
+            </section>
+        </main>
+
+    </body>
 </html>
