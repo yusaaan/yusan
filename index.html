@@ -81,27 +81,29 @@
             color: #333;
         }
 
-        .about-me-container,
-        .hobbies-container {
+        .about-me-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 20px;
             flex-wrap: wrap;
+            position: relative;
         }
 
-        .about-text, .hobbies-text {
+        .about-text {
             flex: 1;
         }
 
-        .about-photo,
-        .hobbies-photo {
-            flex: 0 0 300px;
+        .about-photo {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            bottom: 0;
             text-align: center;
+            flex: 0 0 300px;
         }
 
-        .about-photo img,
-        .hobbies-photo img {
+        .about-photo img {
             border-radius: 15px;
             width: 250px;
             height: 250px;
@@ -124,15 +126,16 @@
             main {
                 padding: 20px;
             }
-            .about-me-container,
-            .hobbies-container {
+            .about-me-container {
                 flex-direction: column;
                 text-align: center;
+                position: relative;
             }
-            .about-photo,
-            .hobbies-photo {
+            .about-photo {
                 margin-top: 20px;
                 flex: 0 0 200px;
+                position: relative;
+                top: auto;
             }
         }
     </style>
@@ -173,9 +176,6 @@
                     <li>Photography.</li>
                     <li>Reading novels</li>
                 </ul>
-            </div>
-            <div class="hobbies-photo">
-                <img src="myself.jpg" alt="Yusan Khatiwada">
             </div>
         </div>
     </section>
@@ -219,25 +219,6 @@
             });
         });
     });
-
-    const modal = document.getElementById('contactModal');
-    const contactLink = document.getElementById('contactLink');
-    const closeModal = document.querySelector('.close');
-
-    contactLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.style.display = "block";
-    });
-
-    closeModal.addEventListener('click', function() {
-        modal.style.display = "none";
-    });
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    };
 </script>
 
 </body>
