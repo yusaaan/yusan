@@ -3,38 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusan</title>
+    <title>Yusan Khatiwada - My Story</title>
     <style>
-        /* Add your CSS styles here */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1f1f1f;
+            background: linear-gradient(135deg, #F7D1D1, #F0E5E5);
+            color: #333;
+            overflow-x: hidden;
         }
-        nav {
+
+        header {
+            background-color: #F4A6B1;
+            color: #fff;
+            padding: 30px 0;
             text-align: center;
-            background-color: #333;
-            padding: 10px;
-            }
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #F1C3D4;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
         nav a {
             color: #fff;
             text-decoration: none;
-            text-align: center;
-            padding: 20px;
+            padding: 15px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #F1A1B4;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #F4A6B1;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
             }
-        header {
-            background-color: #1f1f1f;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+            nav a {
+                padding: 12px 15px;
+                font-size: 16px;
+            }
+            main {
+                padding: 20px;
+            }
         }
-        .container {
-            max-width: 800px;
-            color: #fff;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+
         .about-section {
             background-color: #fff;
             color: #000;
@@ -42,28 +106,36 @@
             margin-top: 20px;
             border-radius: 5px;
         }
-        /* Add more styles as needed */
+
+        .container {
+            max-width: 1200px;
+            color: #333;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1> :) </h1>
+    <h1>Yusan Khatiwada</h1>
+    <p>Welcome to My Personal Website</p>
 </header>
-<nav>
-            <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="contact.html">Contact</a>
-            <!-- Add more navigation links as needed -->
-    </nav>
 
-<div class="container">
-    <h2>About Me</h2>
-    <div class="about-section">
-        <!-- This is where you can write about yourself -->
-        <p>Hiii</p>
-    </div>
-</div>
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+<main>
+    <section class="container">
+        <h2>About Me</h2>
+        <div class="about-section">
+            <p>Hello! My name is Yusan Khatiwada. I'm passionate about learning new things and exploring the world around me. I believe in continuous growth and self-improvement. Every person has a unique story, and I’m excited to share mine with you. From my childhood to where I am now, these experiences have shaped who I am today.</p>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>
