@@ -86,6 +86,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .about-text {
@@ -93,14 +94,14 @@
         }
 
         .about-photo {
-            flex: 0 0 40%;
+            flex: 0 0 300px;
             text-align: center;
         }
 
         .about-photo img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            border-radius: 15px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
         }
 
@@ -125,143 +126,3 @@
         .modal-content {
             background-color: #fff;
             margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 8px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-            nav a {
-                padding: 12px 15px;
-                font-size: 16px;
-            }
-            main {
-                padding: 20px;
-            }
-            .about-me-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .about-photo {
-                margin-top: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<header id="header">
-    <h1>Yusan Khatiwada</h1>
-    <p>Welcome to My Personal Website</p>
-</header>
-
-<nav>
-    <a href="/">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<main>
-    <section class="section" id="about">
-        <h2>About Me</h2>
-        <div class="about-me-container">
-            <div class="about-text">
-                <p>Hello! My name is Yusan Khatiwada. I'm passionate about learning new things and exploring the world around me. I believe in continuous growth and self-improvement. Every person has a unique story, and I’m excited to share mine with you. From my childhood to where I am now, these experiences have shaped who I am today.</p>
-            </div>
-            <div class="about-photo">
-                <img src="myself.jpg" alt="Yusan Khatiwada">
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Hobbies & Interests</h2>
-        <p>I don't have any specific hobbies but in general I enjoy:</p>
-        <ul>
-            <li>Traveling to new places.</li>
-            <li>Photography.</li>
-            <li>Reading novels</li>
-        </ul>
-    </section>
-
-    <section class="section" id="goals">
-        <h2>My Goals</h2>
-        <p>My main goal is to keep growing, both personally and professionally. I aspire to:</p>
-        <ul>
-            <li>Become a Mechanical Engineer</li>
-            <li>Travel the world.</li>
-            <li>Make a positive impact on others through my work</li>
-        </ul>
-    </section>
-
-    <section class="section" id="learning">
-        <h2>About My Studies</h2>
-        <ul>
-            <li>Graduated from Paradise English Boarding School in 2021 (Class 10).</li>
-            <li>Completed +2 from Janasahayog Ma.Vi in 2023.</li>
-            <li>Currently pursuing Mechanical Engineering at Kathmandu University (KU).</li>
-        </ul>
-    </section>
-</main>
-
-<script>
-    window.addEventListener('scroll', function() {
-        const header = document.getElementById('header');
-        if (window.scrollY > 100) {
-            header.style.backgroundColor = '#F1A1B4';
-        } else {
-            header.style.backgroundColor = '#F4A6B1';
-        }
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    const modal = document.getElementById('contactModal');
-    const contactLink = document.getElementById('contactLink');
-    const closeModal = document.querySelector('.close');
-
-    contactLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.style.display = "block";
-    });
-
-    closeModal.addEventListener('click', function() {
-        modal.style.display = "none";
-    });
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    };
-</script>
-
-</body>
-</html>
