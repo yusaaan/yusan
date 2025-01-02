@@ -1,10 +1,10 @@
 RewriteEngine On
 
-# Redirect to index page without showing index.html in URL
+# Redirect the base URL to index.html (for homepage)
 RewriteRule ^$ /index.html [L]
 
-# Rewriting contact page (remove .html from URL)
-RewriteRule ^contact$ /contact.html [L]
-
-# Rewriting about page (remove .html from URL)
+# Remove .html extension from the about page
 RewriteRule ^about$ /about.html [L]
+
+# Remove .html extension from the contact page
+RewriteRule ^contact$ /contact.html [L]
